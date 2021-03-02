@@ -1,0 +1,108 @@
+var iceCream: Array<string> = [
+    "Oreo With Gummy Bears",
+    "Moosetracks",
+    "Chocolate Chip",
+    "Coffee",
+    "Grasshopper",
+    "Recursion Flavored",
+    "Chocolate Fudge Brownie",
+    "Strawberry Cheesecake",
+    "Mint Chocolate Chip",
+]
+for (let i= 0; i < iceCream.length; i++) {
+    console.log (Ice Cream #${i + 1}; ${iceCream[i]})
+}
+array :arrow_up:
+function getPalindrome(word: string) {
+    return word.split("").reverse().join("")
+}
+
+let palindromes: Array<string> = [
+    "racecar",
+    "madam",
+    "kayak",
+    //"dammit im mad",
+    "wow",
+    "yay",
+    "tacocat",
+    "level"
+]
+
+let notPalindromes: Array<string> =[
+    "Palindrome",
+    "Chat",
+    "View Everyone",
+    "Coding",
+    "Bacon Pancakes"
+]
+
+palindromes.forEach((word) => {
+    test(looking to see if "${word}" is a palindrome, () => {
+        expect(getPalindrome(word)).toEqual(word)
+    })
+})
+forEach loop :arrow_up:
+class Bird {
+    name: string
+    areTheyPretty: boolean = true
+    canFly: boolean
+    hasFeathers: boolean = true
+
+    constructor(name: string, canFly: boolean) {
+        this.name = name
+        this.canFly = canFly
+    }
+}
+let birds: Array<Bird> = [
+    new Bird("Toucan", true),
+    new Bird("Penguin", false),
+    new Bird("Pidgeon", true),
+    new Bird("Emu", false),
+    new Bird("Seagull", true)
+]
+birds.forEach((item: Bird)=> {
+    console.log(item)
+})
+reusable models :arrow_up:
+class Birds {
+    name: string
+    canFly: boolean
+
+    constructor(name:string, canFly: boolean) {
+        this.name = name
+        this.canFly = canFly
+    }
+    flapWings () {
+        if (this.canFly)
+        console.log (${this.name} flaps its wings, and takes off into the blue!)
+        else 
+        console.log (${this.name} it tried so hard and got so far, but in the end it doesnt even matter)
+    }
+}
+let birdss: Array<Birds> = [
+    new Birds("Toucan", true),
+    new Birds("Penquin", false),
+    new Birds("Pidgeon", true),
+    new Birds("Emu", false)
+]
+birdss.forEach ((item: Birds) => {
+    item.flapWings()
+})
+methods :arrow_up:
+function getUser(id: number, callback) {
+    let user = {id:2, subscriber: false}
+    callback(user)
+}
+function handleDeliveryFee(user): number {
+    let fee: number = user.subscriber ? 0 : 3
+    console.log(Returning a $ ${fee} fee.)
+    return user.subscriber ? 0 : 3
+}
+getUser(1, handleDeliveryFee)
+getUser(1, (user)=> {
+    console.log(user)
+})
+call backs :arrow_up:
+
+//The code above was giving me problems and I had to add `` to all the console.log() lines and the test() 
+line in the for each loop. How come yours didn't need backticks?
